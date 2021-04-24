@@ -78,8 +78,11 @@ function App() {
 
 
   function inputChangeHandler(event){
+    
     var meaning = emojiDictionary[event.target.value];
-    if(meaning==="undefined"){
+    console.log(meaning);
+    if(meaning === undefined){
+      
       setEmojiMeaning("We do not have entered emoji in our database");
     }else{
       setEmojiMeaning(meaning);
@@ -89,7 +92,7 @@ function App() {
 
   function emojiClickHandler(emoji){
     var meaning = emojiDictionary[emoji];
-    if(meaning==="undefined"){
+    if(meaning===undefined){
       setEmojiMeaning("We do not have entered emoji in our database");
     }else{
       setEmojiMeaning(meaning);
